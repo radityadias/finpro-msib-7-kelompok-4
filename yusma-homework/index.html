@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework Layouting UI</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="container-grid">
+        <div class="row">
+
+        <!-- navbar -->
+            <div class="col-md-2">
+                <nav class="navbar">
+                    <div id="toggler" class="toggler">
+                        <button class="navbar-toggler" type="button" data-bs-toggler="collapse" onclick="toggleSidebar()">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                        <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+                    </div>
+                    <div class="navbar-content" id="navbarNav">
+                        <span class="brand">
+                            <i class="fa-solid fa-graduation-cap p-1"></i>MyEduPlatform
+                        </span>
+                        <hr class="mt-4 mb-4">
+                        <div class="navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a href="#profile" class="nav-link" onclick="showSection('profile')"><i class="fa-solid fa-user p-2"></i>Profile</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#course" class="nav-link" onclick="showSection('course')"><i class="fa-solid fa-book-open-reader p-2"></i>Course</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#task" class="nav-link" onclick="showSection('task')"><i class="fa-solid fa-file-lines p-2"></i>Task</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- konten -->
+            <div class="col-md-10">
+                <div id="mainContent">
+
+                    <!-- profil -->
+                    <div id="profile" class="content-section profile" style="display: none;">
+                        <div class="row align-items-center">
+                            <div class="sticky-header mb-4">
+                                <h4 class="title">Profile</h4>
+                            </div>
+
+                            <div id="infoProfile" class="profile-info row pt-2">
+                                <!-- foto profil -->
+                                <div class="col-md-4 text-center">
+                                    <img src="https://via.placeholder.com/200" alt="Profile Picture" class="img-thumbnail mb-3">
+                                    <div class="mb-3">
+                                        <input type="file" class="form-control" id="uploadProfile">
+                                        <button class="btn upload-btn mt-3">Upload Profile</button>
+                                    </div>
+                                </div>
+
+                                <!-- info profil -->
+                                <div class="col-md-8">
+                                    <form>
+                                        <div class="mb-2">
+                                            <label for="name" class="form-label">Name</label>
+                                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                                        </div>
+                                        <div class="mb-2">
+                                            <label for="email" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                                        </div>
+                                        <div class="mb-2">
+                                            <label for="oldPassword" class="form-label">Old Password</label>
+                                            <input type="password" class="form-control" id="oldPassword" placeholder="Enter your old password">
+                                        </div>
+                                        <div class="mb-2">
+                                            <label for="newPassword" class="form-label">New Password</label>
+                                            <input type="password" class="form-control" id="newPassword" placeholder="Enter new password">
+                                        </div>
+                                        <div class="mb-2">
+                                            <label for="confirmPassword" class="form-label">Confirm Password</label>
+                                            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm new password">
+                                        </div>
+                                        <button type="submit" class="btn change-btn mt-3" onclick="profile()">Change Profile</button>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <!-- tampilkan profil -->
+                            <div id="displayProfile" class="d-none">
+                                <div class="profile-info row pt-2">
+                                    <!-- foto profil -->
+                                    <div class="col-md-4 text-center">
+                                        <img src="images/profile.jpg" width="200px" alt="Profile Picture" class="img-thumbnail mb-3">
+                                    </div>
+                                    <!-- info profil -->
+                                    <div class="col-md-8">
+                                        <h6 class="mb-3">Detail Student</h6>
+                                        <p class="mb-2"><b style="opacity: 0.5;">Name </b>Doh Kyungsoo</p>
+                                        <p class="mb-2"><b style="opacity: 0.5;">Email </b>kyungsoo93@gmail.com</p>
+                                        <p class="mb-2"><b style="opacity: 0.5;">NPM </b>2110631170117</p>
+                                        <p class="mb-2"><b style="opacity: 0.5;">Gender </b>Male</p>
+                                        <p class="mb-2"><b style="opacity: 0.5;">Address </b>(Not Available)</p>
+                                        <p class="mb-2"><b style="opacity: 0.5;">Number </b>+6287834753010</p>
+                                        <p class="mb-2"><b style="opacity: 0.5;">LinkedIn </b>(Not Available)</p>
+                                        <button type="submit" class="btn change-btn mt-3" onclick="profile()">Edit Profile</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- kursus -->
+                    <div id="course" class="content-section course">
+                        <div class="row align-items-center">
+                            <div class="sticky-header mb-4">
+                                <h4 class="title">Course List</h4>
+                            </div>
+
+                            <!-- daftar kursus -->
+                            <div class="card-list d-flex overflow-hidden" id="courseContent">
+                                <!-- kursus 1 -->
+                                <div class="card mb-2 col-md-4">
+                                    <div class="card-body">
+                                        <img src="images/course.png" alt="Course Image" width="100%" height="150px">
+                                        <div class="card-info pt-3 pb-3">
+                                            <h5 class="card-title">Introduction to Python Programming</h5>
+                                            <p class="card-text"><b style="opacity: 0.8;">Course Detail</b><br> 09 September 2024 - 30 September 2024</p>
+                                        </div>
+                                        <div class="card-footer d-flex align-items-center justify-content-between mt-10 pl-0 pr-0">
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 70%;" area-valuenow="70" area-valuemin="0" area-valuemax="100">70%</div>
+                                            </div>
+                                            <div class="btn">
+                                                <a href="">View Class</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- kursus 2 -->
+                                <div class="card mb-2 col-md-4">
+                                    <div class="card-body">
+                                        <img src="images/course.png" alt="Course Image" width="100%" height="150px">
+                                        <div class="card-info pt-3 pb-3">
+                                            <h5 class="card-title">Introduction to Python Programming</h5>
+                                            <p class="card-text"><b style="opacity: 0.8;">Course Detail</b><br> 09 September 2024 - 30 September 2024</p>
+                                        </div>
+                                        <div class="card-footer d-flex align-items-center justify-content-between mt-10 pl-0 pr-0">
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 55%;" area-valuenow="55" area-valuemin="0" area-valuemax="100">55%</div>
+                                            </div>
+                                            <div class="btn">
+                                                <a href="">View Class</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- kursus 3 -->
+                                <div class="card mb-2 col-md-4">
+                                    <div class="card-body">
+                                        <img src="images/course.png" alt="Course Image" width="100%" height="150px">
+                                        <div class="card-info pt-3 pb-3">
+                                            <h5 class="card-title">Introduction to Python Programming</h5>
+                                            <p class="card-text"><b style="opacity: 0.8;">Course Detail</b><br> 09 September 2024 - 30 September 2024</p>
+                                        </div>
+                                        <div class="card-footer d-flex align-items-center justify-content-between mt-10 pl-0 pr-0">
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 100%;" area-valuenow="100" area-valuemin="0" area-valuemax="100">100% - Completed</div>
+                                            </div>
+                                            <div class="btn">
+                                                <a href="">View Class</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- kursus 4 -->
+                                <div class="card mb-2 col-md-4">
+                                    <div class="card-body">
+                                        <img src="images/course.png" alt="Course Image" width="100%" height="150px">
+                                        <div class="card-info pt-3 pb-3">
+                                            <h5 class="card-title">Introduction to Python Programming</h5>
+                                            <p class="card-text"><b style="opacity: 0.8;">Course Detail</b><br> 09 September 2024 - 30 September 2024</p>
+                                        </div>
+                                        <div class="card-footer d-flex align-items-center justify-content-between mt-10 pl-0 pr-0">
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 30%;" area-valuenow="30" area-valuemin="0" area-valuemax="100">30%</div>
+                                            </div>
+                                            <div class="btn">
+                                                <a href="">View Class</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- tombol scroll -->
+                            <div class="button-container">
+                                <button class="btn scroll-left"><i class="fa-solid fa-angle-left"></i></button>
+                                <button class="btn scroll-right"><i class="fa-solid fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- task -->
+                    <div id="task" class="content-section task" style="display: none;">
+                        <div class="row align-items-center">
+                            <div class="sticky-header mb-4">
+                                <h4 class="title">Task List</h4>
+                            </div>
+
+                        <div class="task-info row pt-2 justify-content-center">
+                
+                        <!-- task up coming -->
+                        <div class="card-task col-md-6 mb-2">
+                            <div class="alert alert-warning" role="alert">
+                                <div class="task-body mb-3">
+                                    <p class="card-text"><b style="opacity: 0.8;">Assignment 1</b></p>
+                                    <h5 class="task-title">Homework UI/UX Project</h5>
+                                    <p class="task-detail">Due: <span class="text-danger">12 Oktober 2024</span></p>
+                                </div>
+                                <div class="mt-3">
+                                    <label for="fileLinkUpcoming" class="form-label">File Task: </label>
+                                    <a href="https://rakamin-lms.s3.ap-southeast-1.amazonaws.com/86g7w8nma7a58q0ymfigpwl02mbe?response-content-disposition=inline%3B%20filename%3D%22Homework%20UI%20Layouting.pdf%22%3B%20filename%2A%3DUTF-8%27%27Homework%2520UI%2520Layouting.pdf&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIATEHFT35YRRD7BK7S%2F20241013%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20241013T034030Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=b3eba6566907d848f1b1f0ac4ba3830412aaaa0b2677f77cbbed112b2dde7ae8" class="btn task-btn" target="_blank">View Task</a>
+                                </div>
+                                <div class="mt-2">
+                                    <label for="fileUploadUpcoming" class="form-label">Upload File</label>
+                                    <input class="form-control" type="file" id="fileUploadUpcoming" required>
+                                    <button type="submit" class="btn submit-btn mt-2">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- task  -->
+                        <div class="card-task col-md-6 mb-2">
+                            <div class="alert alert-danger" role="alert">
+                                <div class="task-card mb-3">
+                                    <p class="card-text"><b style="opacity: 0.8;">Assignment 2</b></p>
+                                    <h5 class="task-title">Quiz HTML & CSS</h5>
+                                    <p class="task-detail">Due: <span class="text-danger">Tomorrow</span></p>
+                                </div>
+                                <div class="mt-3">
+                                    <label for="fileLinkUpcoming" class="form-label">File Task: </label>
+                                    <a href="https://rakamin-lms.s3.ap-southeast-1.amazonaws.com/86g7w8nma7a58q0ymfigpwl02mbe?response-content-disposition=inline%3B%20filename%3D%22Homework%20UI%20Layouting.pdf%22%3B%20filename%2A%3DUTF-8%27%27Homework%2520UI%2520Layouting.pdf&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIATEHFT35YRRD7BK7S%2F20241013%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20241013T034030Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=b3eba6566907d848f1b1f0ac4ba3830412aaaa0b2677f77cbbed112b2dde7ae8" class="btn task-btn" target="_blank">View Task</a>
+                                </div>
+                                <div class="mt-2">
+                                    <label for="fileUploadUpcoming" class="form-label">Upload File</label>
+                                    <input class="form-control" type="file" id="fileUploadUpcoming" required>
+                                    <button type="submit" class="btn submit-btn mt-2">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
