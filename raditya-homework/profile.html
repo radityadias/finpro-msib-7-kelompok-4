@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajarlah</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="profile.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- NAVBAR -->
+      <header>
+    <nav class="navbar navbar-expand-lg bg-body-none fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#" id="sidebarToggle">
+          <h2 class="text-white">Belajarlah!</h2>
+        </a>
+        <ul class="navbar-nav ms-auto d-flex flex-row align-items-center">
+          <li id="bellDropdown" class="nav-item dropdown">
+            <a class="nav-link d-flex align-items-center notif" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="bi bi-bell bell-icon fs-3 text-white"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end position-absolute" aria-labelledby="bellDropdown">
+              <li class="dropdown-header">Full Stack</li>
+                  <li><a class="dropdown-item" href="fullstack.html">0 Terlewat</a></li>
+                  <li><a class="dropdown-item" href="fullstack.html">3 Task Tersedia</a></li>
+                  <li><a class="dropdown-item" href="fullstack.html">3 Exam Tersedia</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li class="dropdown-header">UI/UX</li>
+                  <li><a class="dropdown-item" href="course.html">Kosong</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li class="dropdown-header">Data Mining</li>
+                  <li><a class="dropdown-item" href="course.html">Kosong</a></li>
+            </ul>
+          </li>
+          <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasSidebar"
+              aria-controls="offcanvasSidebar"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>  
+          <li class="nav-item dropdown collapse navbar-collapse" id="profile">
+            <a class="nav-link d-flex align-items-center" href="#" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="profile.svg" alt="Profile" class=" profile-icon" width="40" height="40">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end position-absolute" aria-labelledby="navbarDropdown">
+              <li class="dropdown-img-container">
+                    <img
+                      src="person-circle.svg"
+                      alt="Profile Picture"
+                      class="profile-img"
+                    />
+                  </li>
+                  <li class="line"></li>
+                  <li><a class="dropdown-item" href="#">Settings</a></li>
+                  <li><a class="dropdown-item" href="#">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+      <div
+        class="offcanvas offcanvas-end"
+        tabindex="-1"
+        id="offcanvasSidebar"
+        aria-labelledby="offcanvasSidebarLabel"
+      >
+        <div class="offcanvas-header">
+          <button
+            type="button"
+            class="btn-close text-reset"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="nav flex-column">
+            <!-- Profile Image -->
+            <li class="nav-item text-center">
+              <img
+                src="person-circle.svg"
+                alt="Profile Picture"
+                class="profile-img"
+                style="width: 80px; height: 80px; border-radius: 50%"
+              />
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="Beranda.html"
+                ><i class="bi bi-house"></i><span> Dashboard</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="profile.html"
+                ><i class="bi bi-person"></i><span> Profile</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i class="bi bi-calendar-event"></i><span> Task</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="course.html"
+                ><i class="bi bi-book"></i><span> Course</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i class="bi bi-journal-code"></i><span> Certificate</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i class="bi bi-briefcase"></i><span> Portofolio</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i class="bi bi-currency-dollar"></i
+                ><span> Payment</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="sidebar-wrapper">
+        <div class="sidebar">
+          <ul class="nav flex-column">
+              <li class="sidebar-title mt-2">Personal</li>
+
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="Beranda.html"
+                ><i class="bi bi-house"></i><span> Dashboard</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="profile.html"
+                ><i class="bi bi-person"></i><span> Profile</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i class="bi bi-calendar-event"></i><span> Task</span></a
+              >
+            </li>
+            <li class="sidebar-title">Konten</li>
+            <li class="nav-item">
+              <a href="course.html" class="nav-link"
+                ><i class="bi bi-grid"></i> <span>Course</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <div class="dropdown" id="drop-course">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  ><i class="bi bi-book"></i> <span> Courses </span></a
+                >
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li>
+                    <a class="dropdown-item color-dark" href="fullstack.html"
+                      ><span>Full Stack</span> <i class="bi bi-braces"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      ><span>UI/UX</span> <i class="bi bi-easel"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-item"><span>Data Mining </span> <i class="bi bi-bar-chart"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link"
+                ><i class="bi bi-journal-code"></i><span> Certificate</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link"
+                ><i class="bi bi-briefcase"></i><span> Portofolio</span></a
+              >
+            </li>
+            <li class="sidebar-title">Finansial</li>
+            <li class="nav-item">
+              <a href="#" class="nav-link"
+                ><i class="bi bi-currency-dollar"></i
+                ><span> Payment</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- KONTEN -->
+      <div class="konten-wrapper" id="user">
+        <div class="row">
+          <div class="col-12">
+            <h4>Profile</h4>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-12">
+                            <div class="card-body ">
+                                <div class="row row-cols-1 row-cols-lg-2 mb-3">
+                                    <div class="col">
+                                        <div class="row row-cols-2" >
+                                            <div class="col-md-5 d-flex justify-content-center">
+                                                <img src="person-circle.svg" alt="Profile" style="width: 15vw;">
+                                            </div>    
+                                            <div class="col">
+                                                <button class="btn btn-primary">Upload Image</button>
+                                                <p class="text-secondary">Minimal Ukuran 800x800 px. Format JPG, JPEG</p>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                    <div class="col">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="inputEmail" class="form-label">Email address</label>
+                                                <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="@gmail.com">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="inputNomor" class="form-label">No Telepon</label>
+                                                <input type="text" class="form-control" id="inputNomor" placeholder="+62" >
+                                            </div>                                       
+                                        </form>
+                                    </div>   
+                                </div>
+                                <div class="row row-cols-1 row-cols-lg-2">
+                                    <div class="col">
+                                        <div class="mb-3">
+                                                <label for="inputNama" class="form-label">Nama Lengkap</label>
+                                                <input type="text" class="form-control" id="inputNama" >
+                                            </div>       
+                                    </div>
+                                    <div class="col">
+                                        <div class="mb-3">
+                                                <label for="inputBio" class="form-label">Bio</label>
+                                                <input type="text" class="form-control" id="inputBio" >
+                                            </div>     
+                                    </div>
+                                    <div class="col">
+                                        <div class="mb-3">
+                                                <label for="inputPanggilan" class="form-label">Nama Panggilan</label>
+                                                <input type="text" class="form-control" id="inputPanggilan" >
+                                            </div>
+                                               
+                                    </div>
+
+                                    <div class="col">
+                                         <div class="mb-3">
+                                                <label for="inputSpesialisasi" class="form-label">Spesialisasi</label>
+                                                <input type="text" class="form-control" id="inputSpesialisasi" >
+                                            </div>  
+                                    </div>
+                                </div>
+                                <div class="wrapper-button">
+                                    <button class="btn btn-success">Simpan</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
