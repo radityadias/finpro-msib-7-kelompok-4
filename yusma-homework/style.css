@@ -1,0 +1,257 @@
+:root {
+    --color-dark: #243642;
+    --color-primary: #387478;
+    --color-secondary: #629584;
+    --color-light: #E2F1E7;
+}
+body {
+    background-color: var(--color-light);
+    overflow-x: hidden;
+}
+.container-fluid {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto;
+}
+
+/* navbar */
+.navbar-content {
+    flex-direction: column;
+    color: var(--color-dark);
+    min-height: 100vh;
+    padding: 20px;
+    position: fixed;
+    width: 250px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+}
+.navbar-collapse a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    text-align: left;
+}
+.navbar-collapse a i {
+    margin-right: 10px;
+}
+.navbar-collapse a.active {
+    background-color: var(--color-secondary);
+    color: var(--color-light);
+    border-radius: 5px;
+    padding: 8px;
+    padding-left: 10px;
+}
+.navbar-collapse a.hover {
+    background-color: var(--color-secondary);
+}
+.navbar-content .brand {
+    font-size: 1rem;
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+}
+.toggler {
+    display: block;
+}
+.toggler.hide {
+    visibility: hidden; 
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none; 
+    z-index: 1000;
+}
+
+/* konten */
+.content-section {
+    width: 100%;
+    padding: 2rem;
+}
+.sticky-header {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding-bottom: 10px;
+    width: 100%;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+.title {
+    padding-left: 25px;
+}
+
+/* profile */
+.profile-info {
+    justify-content: center;
+    gap: 40px;
+}
+.profile .col-md-8 {
+    max-width: 40%;
+}
+.profile .col-md-4 {
+    max-width: 40%;
+}
+
+/* button */
+.profile-info .btn,
+.card-footer .btn a,
+.task-info .btn {
+    background-color: var(--color-secondary);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.profile-info .btn:hover,
+.card-footer .btn a:hover,
+.task-info .btn:hover {
+    opacity: 0.8; 
+    color: black; 
+}
+
+/* Untuk membuat scroll horizontal */
+.card-list {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin: 0 25px !important;
+    gap: 20px;
+}
+.card-body {
+    width: 50px;
+    flex: 0 0 auto;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 50%;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+.card-body img {
+    border-radius: 5px 5px 0 0;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+}
+
+/* button scroll */
+.scroll-button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    border-radius: 50px;
+    width: 5% !important;
+    justify-self: center;
+}
+.scroll-button.left {
+    padding-top: 5px;
+    left: 0;
+}
+.scroll-button.right {
+    padding-top: 5px;
+    right: 0;
+}
+
+/* progress bar */
+.progress {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+.progress-bar {
+    background-color: var(--color-secondary);
+}
+.task-info {
+    padding-left: 25px !important;
+}
+
+@media (min-width: 769px) and (max-width: 815px) {
+    .navbar-content {
+        width: 20%;
+    }
+    .content-section {
+        margin-left: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-nav {
+        flex-direction: row;
+    }
+    #navbarNav {
+        display: block; 
+        position: sticky;
+    }
+    .brand {
+        display: inline; 
+    }
+    .toggler {
+        display: none; 
+    }
+}
+
+@media (max-width: 767px) {
+    .toggler {
+        display: block; 
+        position: absolute; 
+        top: 10px;
+        left: 10px;
+        margin: 25px;
+        z-index: 1000; 
+    }
+    #overlay.show {
+        display: block;
+    }
+    .navbar-content {
+        display: none; 
+    }
+    .navbar-content.show {
+        display: flex; 
+        background-color: var(--color-secondary); 
+        color: var(--color-light);
+    }
+    .profile-info {
+        flex-direction: column; 
+        text-align: left; 
+    }
+    .profile-info .col-md-4, 
+    .profile-info .col-md-8 {
+        max-width: 100%;
+    }
+    .profile .col-md-4 img {
+        width: 150px; 
+        height: auto; 
+    }
+    .title {
+        padding-left: 75px;
+    }
+    .card-list {
+        display: flex; 
+        flex-wrap: wrap; 
+        overflow-x: hidden; 
+        margin: 0; 
+    }
+    .card {
+        flex: 0 0 100%; 
+        max-width: 100%; 
+    }
+    .scroll-button{
+        display: none;
+    }
+}
