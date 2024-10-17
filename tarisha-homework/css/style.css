@@ -1,0 +1,372 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Warna latar belakang */
+}
+
+.header {
+    background-color: #343a40; /* Warna latar belakang header */
+    color: white; /* Warna teks header */
+    padding: 15px 20px; /* Padding untuk header */
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    gap: 15px;
+    margin-right: auto;
+    color: white; /* Mengubah warna teks menjadi putih */
+}
+
+.nav a {
+    color: white; /* Mengubah warna teks link menjadi putih */
+    text-decoration: none; /* Menghilangkan garis bawah */
+}
+
+.nav a:hover {
+    color: lightgray; /* Warna saat hover */
+}
+
+.main {
+    background-color: lightpink;
+    padding: 20px; /* Padding untuk konten utama */
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.welcome-message p {
+    font-size: 25px;
+}
+
+.welcome-message h2 {
+    color: #007bff; /* Warna teks untuk pesan selamat datang */
+}
+
+.topik-terpopuler {
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.topik-terpopuler a {
+    text-decoration: none;
+}
+
+.topik-terpopuler .col-2 {
+    border: none;
+    background-color: #ffffff;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.small-icon {
+    width: 50px;
+    height: auto;
+}
+
+.topic-title {
+    display: block;
+    margin-top: 5px;
+}
+
+.big-icon {
+    width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.text-section {
+    margin-right: 70px;
+}
+
+.gambar-jarak {
+    margin-bottom: 15px;
+}
+
+.course {
+    background-color: rgb(225, 203, 174);
+}
+
+.kursus-section,
+.tugas-section {
+    margin: 20px;
+    padding: 20px;
+    background-color: rgb(196, 223, 234);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.kursus-section h2,
+.tugas-section h4 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.kursus-section h3 {
+    font-size: 20px;
+    color: #555;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.kursus-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.kursus-section li {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.kursus-section a,
+.tugas-section a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.kursus-section a:hover,
+.tugas-section a:hover {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.kursus-section .row,
+.tugas-section .row {
+    margin: 0;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    background-color: brown;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tugas-section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.last {
+    background-color: lightgray;
+    padding-top: 20px;
+}
+
+.nilai {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+.kkm {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #e0e0e0;
+}
+
+#profileIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #007bff;
+}
+
+#userName {
+    margin-top: 5px;
+    font-weight: bold;
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+#profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.profile-image-container {
+    width: 150px;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.profile-image-container button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+#profile-form {
+    flex: 1;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#profile-image-input {
+    display: none;
+}
+
+.footer {
+    background-color: #343a40; /* Warna latar belakang footer */
+    color: white; /* Warna teks footer */
+    padding: 10px 0; /* Padding untuk footer */
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+.topik-terpopuler .row {
+    flex-direction: row; /* Konten diatur dalam beberapa kolom pada desktop */
+}
+
+.topik-terpopuler .col-12 {
+    margin-bottom: 0; /* Menghilangkan margin bawah pada desktop */
+}
+
+/* Tampilan Mode Tablet */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column; /* Menyusun menu secara vertikal */
+        gap: 10px; /* Mengurangi jarak antar item */
+    }
+
+    .nav-bar {
+        flex-direction: column; /* Menyusun navbar secara vertikal */
+        align-items: flex-start; /* Menyusun item ke kiri */
+    }
+
+    .text-section {
+        margin-right: 0; /* Menghilangkan margin kanan */
+    }
+
+    .col-md-6 {
+        flex: 0 0 100%; /* Setiap kolom mengambil 100% lebar */
+        max-width: 100%; /* Setiap kolom maksimum 100% */
+    }
+
+    .welcome-message p {
+        font-size: 20px; /* Mengurangi ukuran font pada tablet */
+    }
+}
+
+/* Tampilan Mode Mobile */
+@media (max-width: 576px) {
+    .nav-bar {
+        display: flex;
+        flex-direction: column; /* Tautan diatur dalam satu kolom pada mobile */
+    }
+    
+    .topik-terpopuler .row {
+        flex-direction: column; /* Konten diatur dalam satu kolom */
+    }
+
+    .topik-terpopuler .col-12 {
+        margin-bottom: 15px; /* Jarak antar konten */
+    }
+}
