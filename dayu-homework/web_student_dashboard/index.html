@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="bg-gray-100">
+    <!-- Navbar -->
+    <header class="bg-blue-600 p-4 text-white">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="text-lg font-bold">Dashboard Siswa</div>
+        <div class="flex space-x-4">
+          <!-- Menu hamburger untuk mobile -->
+          <button
+            id="menu-btn"
+            class="lg:hidden block focus:outline-none hover:bg-blue-700 rounded p-2"
+          >
+            <i data-feather="menu"></i>
+          </button>
+          <!-- User info and logout -->
+          <div class="hidden lg:flex items-center space-x-4">
+            <a
+              href="./profile.html"
+              class="px-4 py-2 hover:bg-blue-700 rounded flex space-x-2"
+            >
+              <i data-feather="user"></i>
+              <span>Halo, Ida Ayu Tri Sabina Putri!</span>
+            </a>
+            <a
+              href="#"
+              class="px-4 py-2 hover:bg-blue-700 rounded flex space-x-2"
+            >
+              <i data-feather="log-out"></i>
+              <span>Keluar</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="flex">
+      <!-- Sidebar -->
+      <aside
+        id="sidebar"
+        class="w-64 bg-white shadow-md h-screen lg:block hidden"
+      >
+        <ul class="space-y-2 p-4">
+          <li>
+            <a
+              href="./"
+              class="flex items-center p-2 text-gray-700 hover:bg-blue-100 rounded space-x-2"
+            >
+              <i data-feather="home"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="./kursus.html"
+              class="flex items-center p-2 text-gray-700 hover:bg-blue-100 rounded space-x-2"
+            >
+              <i data-feather="book-open"></i>
+              <span>Kursus</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="./tugas.html"
+              class="flex items-center p-2 text-gray-700 hover:bg-blue-100 rounded space-x-2"
+            >
+              <i data-feather="layers"></i>
+              <span>Tugas</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="./mentor.html"
+              class="flex items-center p-2 text-gray-700 hover:bg-blue-100 rounded space-x-2"
+            >
+              <i data-feather="users"></i>
+              <span>Mentor</span>
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Content -->
+      <main class="flex-1 p-6">
+        <h2 class="text-2xl font-semibold text-gray-700">
+          Selamat Datang di Dashboard Siswa
+        </h2>
+          <div class="mt-2">
+            <p class="text-gray-600">
+            Ini adalah halaman utama untuk siswa. Di sini, kamu bisa mengakses
+            tugas, mata pelajaran, dan pengaturan akunmu.
+            </p>
+          </div>
+        <div class="mt-8">
+          <!-- Informasi jumlah kursus dan tugas -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Card Jumlah Kursus -->
+            <a
+              href="./kursus.html"
+              class="bg-white p-6 rounded shadow hover:bg-blue-100 transition"
+            >
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-700">
+                    Jumlah Kursus
+                  </h3>
+                  <p class="text-gray-500">Total: 10 Kursus</p>
+                </div>
+                <i data-feather="book-open" class="text-blue-500"></i>
+              </div>
+            </a>
+
+            <!-- Card Jumlah Tugas -->
+            <a
+              href="./tugas.html"
+              class="bg-white p-6 rounded shadow hover:bg-blue-100 transition"
+            >
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-700">
+                    Jumlah Tugas
+                  </h3>
+                  <p class="text-gray-500">Total: 5 Tugas</p>
+                </div>
+                <i data-feather="layers" class="text-blue-500"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 p-4 text-white text-center">
+      <p>&copy; 2024 Dashboard Siswa. All rights reserved.</p>
+    </footer>
+
+    <script type="text/javascript" src="./js/script.js"></script>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="bg-gray-100">
+    <!-- Navbar -->
+    <header class="bg-blue-600 p-4 text-white">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="text-lg font-bold">Dashboard Siswa</div>
+        <div class="flex space-x-4">
+          <!-- Menu hamburger untuk mobile -->
+          <button
+            id="menu-btn"
+            class="lg:hidden block focus:outline-none hover:bg-blue-700 rounded p-2"
+          >
+            <i data-feather="menu"></i>
+          </button>
+          <!-- User info and logout -->
+          <div class="hidden lg:flex items-center space-x-4">
+            <a
+              href="./profile.html"
+              class="px-4 py-2 hover:bg-blue-700 rounded flex space-x-2"
+            >
+              <i data-feather="user"></i>
+              <span>Halo, Ida Ayu Tri Sabina Putri!</span>
+            </a>
+            <a
+              href="#"
+              class="px-4 py-2 hover:bg-blue-700 rounded flex space-x-2"
+            >
+              <i data-feather="log-out"></i>
+              <span>Keluar</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="flex">
+      <!-- Sidebar -->
+      <aside
+        id="sidebar"
+        class="w-64 bg-white shadow-md h-screen lg:block hidden"
+      >
+        <ul class="space-y-2 p-4">
+          <li>
+            <a
+              href="./"
+              class="flex items-center p-2 text-gray-700 hover:bg-blue-100 rounded space-x-2"
+            >
+              <i data-feather="home"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="./kursus.html"
+              class="flex items-center p-2 text-gray-700 hover:bg-blue-100 rounded space-x-2"
+            >
+              <i data-feather="book-open"></i>
+              <span>Kursus</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="./tugas.html"
+              class="flex items-center p-2 text-gray-700 hover:bg-blue-100 rounded space-x-2"
+            >
+              <i data-feather="layers"></i>
+              <span>Tugas</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="./mentor.html"
+              class="flex items-center p-2 text-gray-700 hover:bg-blue-100 rounded space-x-2"
+            >
+              <i data-feather="users"></i>
+              <span>Mentor</span>
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Content -->
+      <main class="flex-1 p-6">
+        <h2 class="text-2xl font-semibold text-gray-700">Halaman Tugas</h2>
+        <section class="mt-8">
+          <h3 class="text-xl font-semibold text-blue-600">Tugas Mendatang</h3>
+          <div
+            class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            <div class="bg-white shadow-md rounded-lg p-4">
+              <h4 class="text-lg font-semibold text-gray-700">Judul Tugas 1</h4>
+              <p class="text-gray-600 mt-2">
+                Ini adalah deskripsi singkat untuk tugas yang akan datang. Tugas
+                ini melibatkan studi kasus dan analisis data.
+              </p>
+              <p class="text-gray-500 mt-1">Batas Waktu: 20 Oktober 2024</p>
+              <div class="mt-4 flex justify-start">
+                <button
+                  disabled
+                  class="bg-gray-400 text-white px-4 py-2 rounded-lg cursor-not-allowed"
+                >
+                  Belum Tersedia
+                </button>
+              </div>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4">
+              <h4 class="text-lg font-semibold text-gray-700">Judul Tugas 2</h4>
+              <p class="text-gray-600 mt-2">
+                Deskripsi singkat dari tugas ini yang melibatkan implementasi
+                algoritma pemrograman.
+              </p>
+              <p class="text-gray-500 mt-1">Batas Waktu: 25 Oktober 2024</p>
+              <div class="mt-4 flex justify-start">
+                <button
+                  disabled
+                  class="bg-gray-400 text-white px-4 py-2 rounded-lg cursor-not-allowed"
+                >
+                  Belum Tersedia
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="mt-12">
+          <h3 class="text-xl font-semibold text-blue-600">Tugas Saat Ini</h3>
+          <div
+            class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            <div class="bg-white shadow-md rounded-lg p-4">
+              <h4 class="text-lg font-semibold text-gray-700">Judul Tugas 1</h4>
+              <p class="text-gray-600 mt-2">
+                Deskripsi tugas yang saat ini aktif. Kerjakan tugas ini dengan
+                mengimplementasikan struktur data linked list.
+              </p>
+              <p class="text-gray-500 mt-1">Batas Waktu: 15 Oktober 2024</p>
+              <div class="mt-4 flex justify-start">
+                <a
+                  href="./submit.html"
+                  class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700"
+                >
+                  Selesaikan Tugas
+                </a>
+              </div>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4">
+              <h4 class="text-lg font-semibold text-gray-700">Judul Tugas 2</h4>
+              <p class="text-gray-600 mt-2">
+                Deskripsi tugas ini melibatkan pengembangan aplikasi berbasis
+                web menggunakan framework pilihanmu.
+              </p>
+              <p class="text-gray-500 mt-1">Batas Waktu: 18 Oktober 2024</p>
+              <div class="mt-4 flex justify-start">
+                <a
+                  href="./submit.html"
+                  class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700"
+                >
+                  Selesaikan Tugas
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 p-4 text-white text-center">
+      <p>&copy; 2024 Dashboard Siswa. All rights reserved.</p>
+    </footer>
+    <script type="text/javascript" src="./js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="bg-gray-100">
+    <!-- Navbar -->
+    <header class="bg-blue-600 p-4 text-white">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="text-lg font-bold">Dashboard Siswa</div>
+        <div class="flex space-x-4">
+          <!-- Menu hamburger untuk mobile -->
+          <button
+            id="menu-btn"
+            class="lg:hidden block focus:outline-none hover:bg-blue-700 rounded p-2"
+          >
+            <i data-feather="menu"></i>
+          </button>
+          <!-- User info and logout -->
+          <div class="hidden lg:flex items-center space-x-4">
+            <a
+              href="./profile.html"
+              class="px-4 py-2 hover:bg-blue-700 rounded flex space-x-2"
+            >
+              <i data-feather="user"></i>
+              <span>Halo, Ida Ayu Tri Sabina Putri!</span>
+            </a>
+            <a
+              href="#"
+              class="px-4 py-2 hover:bg-blue-700 rounded flex space-x-2"
+            >
+              <i data-feather="log-out"></i>
+              <span>Keluar</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="flex">
+      <!-- Sidebar -->
+      <aside
+        id="sidebar"
+        class="w-64 bg-white shadow-md h-screen lg:block hidden"
+      >
+        <ul class="space-y-2 p-4">
+          <li>
+            <a
+              href="./"
+              class="flex items-center p-2 text-gray-700 hover:bg-blue-100 rounded space-x-2"
+            >
+              <i data-feather="home"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="./kursus.html"
+              class="flex items-center p-2 text-gray-700 hover:bg-blue-100 rounded space-x-2"
+            >
+              <i data-feather="book-open"></i>
+              <span>Kursus</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="./tugas.html"
+              class="flex items-center p-2 text-gray-700 hover:bg-blue-100 rounded space-x-2"
+            >
+              <i data-feather="layers"></i>
+              <span>Tugas</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="./mentor.html"
+              class="flex items-center p-2 text-gray-700 hover:bg-blue-100 rounded space-x-2"
+            >
+              <i data-feather="users"></i>
+              <span>Mentor</span>
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Content -->
+      <main class="flex-1 p-6">
+        <h2 class="text-2xl font-semibold text-gray-700">Selesaikan Tugas</h2>
+
+        <!-- Detail Tugas -->
+        <section class="mt-6 bg-white shadow-md rounded-lg p-4">
+          <h3 class="text-xl font-semibold text-blue-600">Judul Tugas</h3>
+          <p class="text-gray-600 mt-2">
+            Berikut adalah deskripsi lengkap tugas ini. Pada tugas ini, kamu
+            diharuskan membuat aplikasi sederhana menggunakan JavaScript dan
+            mengimplementasikan beberapa fungsi dasar.
+          </p>
+          <p class="text-gray-500 mt-1">Batas Waktu: 15 Oktober 2024</p>
+        </section>
+
+        <!-- Form Pengumpulan Tugas -->
+        <section class="mt-8 bg-white shadow-md rounded-lg p-4">
+          <h3 class="text-xl font-semibold text-gray-700">Pengumpulan Tugas</h3>
+
+          <!-- Unggah File -->
+          <div class="mt-4">
+            <label for="file-upload" class="block text-gray-700 font-semibold">
+              Unggah File Tugas
+            </label>
+            <input
+              type="file"
+              id="file-upload"
+              class="mt-2 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-blue-600 file:text-white hover:file:bg-blue-700"
+            />
+          </div>
+
+          <!-- Catatan atau Komentar -->
+          <div class="mt-4">
+            <label for="catatan" class="block text-gray-700 font-semibold">
+              Tambahkan Catatan (Opsional)
+            </label>
+            <textarea
+              id="catatan"
+              rows="4"
+              class="mt-2 block w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+              placeholder="Tambahkan komentar atau penjelasan tambahan mengenai tugasmu"
+            ></textarea>
+          </div>
+
+          <!-- Tombol Selesaikan -->
+          <div class="mt-6">
+            <button
+              class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700"
+            >
+              Selesaikan Tugas
+            </button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 p-4 text-white text-center">
+      <p>&copy; 2024 Dashboard Siswa. All rights reserved.</p>
+    </footer>
+    <script type="text/javascript" src="./js/script.js"></script>
+  </body>
+</html>

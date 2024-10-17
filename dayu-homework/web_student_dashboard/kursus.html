@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="bg-gray-100">
+    <!-- Navbar -->
+    <header class="bg-blue-600 p-4 text-white">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="text-lg font-bold">Dashboard Siswa</div>
+        <div class="flex space-x-4">
+          <!-- Menu hamburger untuk mobile -->
+          <button
+            id="menu-btn"
+            class="lg:hidden block focus:outline-none hover:bg-blue-700 rounded p-2"
+          >
+            <i data-feather="menu"></i>
+          </button>
+          <!-- User info and logout -->
+          <div class="hidden lg:flex items-center space-x-4">
+            <a
+              href="./profile.html"
+              class="px-4 py-2 hover:bg-blue-700 rounded flex space-x-2"
+            >
+              <i data-feather="user"></i>
+              <span>Halo, Ida Ayu Tri Sabina Putri!</span>
+            </a>
+            <a
+              href="#"
+              class="px-4 py-2 hover:bg-blue-700 rounded flex space-x-2"
+            >
+              <i data-feather="log-out"></i>
+              <span>Keluar</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="flex">
+      <!-- Sidebar -->
+      <aside
+        id="sidebar"
+        class="w-64 bg-white shadow-md h-screen lg:block hidden"
+      >
+        <ul class="space-y-2 p-4">
+          <li>
+            <a
+              href="./"
+              class="flex items-center p-2 text-gray-700 hover:bg-blue-100 rounded space-x-2"
+            >
+              <i data-feather="home"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="./kursus.html"
+              class="flex items-center p-2 text-gray-700 hover:bg-blue-100 rounded space-x-2"
+            >
+              <i data-feather="book-open"></i>
+              <span>Kursus</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="./tugas.html"
+              class="flex items-center p-2 text-gray-700 hover:bg-blue-100 rounded space-x-2"
+            >
+              <i data-feather="layers"></i>
+              <span>Tugas</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="./mentor.html"
+              class="flex items-center p-2 text-gray-700 hover:bg-blue-100 rounded space-x-2"
+            >
+              <i data-feather="users"></i>
+              <span>Mentor</span>
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Content -->
+      <main class="flex-1 p-6">
+        <h2 class="text-2xl font-semibold text-gray-700">Daftar Kursus</h2>
+        <p class="text-gray-600 mt-2">
+          Berikut adalah daftar kursus yang sedang kamu ikuti.
+        </p>
+
+        <!-- Daftar Kursus -->
+        <section class="mt-8 space-y-6">
+          <!-- Kursus 1 -->
+          <div class="bg-white shadow-md rounded-lg p-6">
+            <div class="flex justify-between items-center">
+              <h3 class="text-lg font-semibold text-blue-600">
+                Kursus Pemrograman Dasar
+              </h3>
+              <button
+                class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-800 flex items-center space-x-2"
+              >
+                <i data-feather="arrow-right"></i>
+                <span>Lanjutkan</span>
+              </button>
+            </div>
+            <p class="text-gray-600 mt-2">
+              Kursus ini mencakup dasar-dasar pemrograman dengan menggunakan
+              bahasa Python. Kamu akan belajar tentang variabel, kondisi, loop,
+              dan fungsi.
+            </p>
+            <div class="mt-4">
+              <div class="flex justify-between">
+                <span class="text-gray-500">Progress</span>
+                <span class="text-gray-500">60%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-4 mt-2">
+                <div
+                  class="bg-blue-600 h-4 rounded-full"
+                  style="width: 60%"
+                ></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kursus 2 -->
+          <div class="bg-white shadow-md rounded-lg p-6">
+            <div class="flex justify-between items-center">
+              <h3 class="text-lg font-semibold text-blue-600">
+                Kursus Struktur Data
+              </h3>
+              <button
+                class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-800 flex items-center space-x-2"
+              >
+                <i data-feather="arrow-right"></i>
+                <span>Lanjutkan</span>
+              </button>
+            </div>
+            <p class="text-gray-600 mt-2">
+              Pelajari tentang struktur data seperti array, linked list, stack,
+              dan queue serta bagaimana mengimplementasikannya dalam bahasa
+              pemrograman.
+            </p>
+            <div class="mt-4">
+              <div class="flex justify-between">
+                <span class="text-gray-500">Progress</span>
+                <span class="text-gray-500">45%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-4 mt-2">
+                <div
+                  class="bg-blue-600 h-4 rounded-full"
+                  style="width: 45%"
+                ></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kursus 3 -->
+          <div class="bg-white shadow-md rounded-lg p-6">
+            <div class="flex justify-between items-center">
+              <h3 class="text-lg font-semibold text-blue-600">
+                Kursus Algoritma Pemrograman
+              </h3>
+              <button
+                class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-800 flex items-center space-x-2"
+              >
+                <i data-feather="arrow-right"></i>
+                <span>Lanjutkan</span>
+              </button>
+            </div>
+            <p class="text-gray-600 mt-2">
+              Kursus ini akan membahas cara menyusun algoritma pemrograman yang
+              efisien dan menyelesaikan masalah-masalah dengan menggunakan
+              berbagai algoritma.
+            </p>
+            <div class="mt-4">
+              <div class="flex justify-between">
+                <span class="text-gray-500">Progress</span>
+                <span class="text-gray-500">85%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-4 mt-2">
+                <div
+                  class="bg-blue-600 h-4 rounded-full"
+                  style="width: 85%"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 p-4 text-white text-center">
+      <p>&copy; 2024 Dashboard Siswa. All rights reserved.</p>
+    </footer>
+    <script type="text/javascript" src="./js/script.js"></script>
+  </body>
+</html>
