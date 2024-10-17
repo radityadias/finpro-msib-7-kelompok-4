@@ -1,0 +1,226 @@
+/* Custom styles to change color compositions for mobile */
+
+@media (min-width: 769px) {
+    body {
+        background-color: #ffffff; /* Light background for desktop */
+    }
+}
+
+
+.night-mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    z-index: 3; /* Higher than the text and image to ensure visibility */
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5); /* Set border color to a semi-transparent white */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    /* Hamburger lines to white */
+}
+
+/* Custom styling for gallery images */
+/* Custom card styling */
+/* Custom card styling */
+.card {
+    transition: transform 0.2s ease-in-out;
+    height: 280px; /* Set a specific height for the card to limit its size */
+    overflow: hidden; /* Ensure any extra content is hidden */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slight zoom-in effect when hovering over card */
+}
+
+.card-img-top {
+    height: 100px; /* Further reduce image height */
+    object-fit: cover; /* Ensure image covers the area nicely */
+}
+
+.card-body {
+    padding: 10px; /* Reduce padding inside card body to save space */
+}
+
+.card-title {
+    font-size: 0.9rem; /* Reduce title font size */
+    margin-bottom: 0.3rem; /* Reduce space below the title */
+    line-height: 1.1; /* Reduce line height to save space */
+}
+
+.card-text {
+    font-size: 0.75rem; /* Reduce paragraph font size */
+    margin-bottom: 0.3rem; /* Reduce space below the paragraph */
+    line-height: 1.2; /* Reduce line height to save space */
+}
+
+.btn {
+    padding: 4px 8px; /* Reduce button padding to make it smaller */
+    font-size: 0.8rem; /* Reduce button font size */
+}
+
+.scroll-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping of child elements */
+    padding-bottom: 10px; /* Add padding for better UX */
+}
+
+.scroll-content {
+    display: inline-flex; /* Make cards appear in a row */
+    gap: 10px; /* Space between cards */
+}
+
+.card {
+    width: 300px; /* Set a fixed width for cards */
+    display: inline-block; /* Keep cards on the same line */
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#footer {
+    flex-shrink: 0;
+  
+}
+
+.header-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.header-image {
+    background: url('https://i0.wp.com/fahum.umsu.ac.id/wp-content/uploads/2024/05/Sejarah-Bendera-Pusaka-Merah-Putih-Indonesia.jpg?fit=1366%2C768&ssl=1') no-repeat center center;
+    background-size: cover;
+    width: 100%; /* Set to cover the full width of the container */
+    min-height: 300px; /* Minimum height for smaller screens */
+    max-height: 600px; /* Optional: Maximum height for larger screens */
+    height: 50vh; /* Use viewport height for responsive scaling */
+    object-fit: cover; /* Ensure image fills the space while maintaining aspect ratio */
+    filter: brightness(0.6); /* Darken the image for better readability */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.header-text {
+    background-color: rgba(0, 0, 0, 0.4); /* Black overlay with transparency */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #d4af37;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .header-image {
+        height: 30vh; /* Use smaller height for mobile devices */
+    }
+}
+
+.header-image::after {
+    content: ''; /* Empty content for the overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Black overlay with opacity */
+    z-index: 1; /* Make sure the overlay is on top of the image */
+}
+
+
+
+
+/* Styles for night mode (only for mobile devices) */
+@media (max-width: 768px) {
+    body.night-mode {
+        background-color: #1a1919; /* Dark background for night mode */
+        color: #f0f0f0; /* Light text for night mode */
+    }
+
+    /* Example: Styling for navbar, header, and other elements */
+    .custom-navbar, .header-image {
+        background-color: #333; /* Dark color for night mode */
+    }
+
+    .header-text{
+        border: 3px solid #333;
+    }
+
+    .btn{
+        background-color: #333;
+    }
+}
+
+@media (min-width: 768px) {
+    body.night-mode {
+        background-color: #1a1919; /* Dark background for night mode */
+        color: #f0f0f0; /* Light text for night mode */
+    }
+
+    /*Styling for navbar, header, and other elements */
+    .custom-navbar, .header-image {
+        background-color: #d4af37; /* color for day mode */
+    }
+
+    .btn{
+        background-color: #d4af37
+    }
+}
+
+/* Gallery styling */
+a img {
+    transition: transform 0.3s ease;
+}
+
+a:hover img {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+ /* Ensuring modal image is responsive and scaled */
+ .modal-body img {
+    width: 100%;
+    max-width: 90vw; /* Max width based on viewport */
+    height: auto;
+    object-fit: contain; /* Ensure image fits well */
+    transition: transform 0.5s ease; /* Smooth scaling transition */
+}
+
+/* Add zoom effect to image when opened in modal */
+.modal-body img.zoomed {
+    transform: scale(1.2); /* Scale up the image inside the modal */
+}
+
+.gallery-item {
+    text-align: center;
+}
+
+.modal-title{
+    color: black;
+}
+
